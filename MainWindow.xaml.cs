@@ -25,44 +25,31 @@ namespace Tema2_FormatoTexto
             InitializeComponent();
         }
 
-        private void Caja_TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            resultado_TextBlock.Text = caja_TextBox.Text;
-        }
+        private void Caja_TextBox_TextChanged(object sender, TextChangedEventArgs e) 
+            => resultado_TextBlock.Text = caja_TextBox.Text;
 
-        private void Negrita_CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.FontWeight = FontWeights.Bold;
-        }
+        private void Negrita_CheckBox_Checked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.FontWeight = FontWeights.Bold;
 
-        private void Negrita_CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.FontWeight = FontWeights.Thin;
-        }
+        private void Negrita_CheckBox_Unchecked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.FontWeight = FontWeights.Thin;
 
-        private void Cursiva_CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.FontStyle = FontStyles.Italic;
-        }
+        private void Cursiva_CheckBox_Checked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.FontStyle = FontStyles.Italic;
 
-        private void Cursiva_CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.FontStyle = FontStyles.Normal;
-        }
+        private void Cursiva_CheckBox_Unchecked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.FontStyle = FontStyles.Normal;
 
         private void Rojo_RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            resultado_TextBlock.Foreground = Brushes.Red;
+            if(resultado_TextBlock != null)
+                resultado_TextBlock.Foreground = Brushes.Red;
         }
 
-        private void Azul_RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.Foreground = Brushes.Blue;
-        }
+        private void Azul_RadioButton_Checked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.Foreground = Brushes.Blue;
 
-        private void Verde_RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            resultado_TextBlock.Foreground = Brushes.Green;
-        }
+        private void Verde_RadioButton_Checked(object sender, RoutedEventArgs e) 
+            => resultado_TextBlock.Foreground = Brushes.Green;
     }
 }
